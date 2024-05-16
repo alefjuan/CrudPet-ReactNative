@@ -10,7 +10,7 @@ export default function HeaderRight() {
 
   return (
     <>
-      <Text>{user?.email}</Text>
+      <Text>{"Hello, "+user?.email?.replace("@example.com", "")+"!"}</Text>
       <StyledButton
         onPress={async () => {
           try {
@@ -20,8 +20,8 @@ export default function HeaderRight() {
             Alert.alert("Logout error", error.toString());
           }
         }}
-        title={"Logout"}
-        style={{ width: "auto", marginLeft: 12 }}
+        title={"Sair"}
+        style={{ width: "auto", marginLeft: 12, backgroundColor:"red"}}
       />
     </>
   );
